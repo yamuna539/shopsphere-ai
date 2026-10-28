@@ -252,5 +252,5 @@ module.exports = {
   shoppingAssistant,
   getProductRecommendations,
   compareProducts,
-   getReviewSummary,
+  getReviewSummary,
 };

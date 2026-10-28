@@ -37,18 +37,25 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Middleware
-const allowedOrigins = [
-  "http://localhost:5173",
-  process.env.CLIENT_URL?.replace(/\/$/, ""),
-].filter(Boolean);
-
 app.use(
   cors({
-    origin: allowedOrigins,
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
 
+
+// const allowedOrigins = [
+//   "http://localhost:5173",
+//   process.env.CLIENT_URL?.replace(/\/$/, ""),
+// ].filter(Boolean);
+
+// app.use(
+//   cors({
+//     origin: allowedOrigins,
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
